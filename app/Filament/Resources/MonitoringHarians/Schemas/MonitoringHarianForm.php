@@ -2,7 +2,7 @@
 
 namespace App\Filament\Resources\MonitoringHarians\Schemas;
 
-use Filament\Forms\Components\DateTimePicker;
+use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
@@ -14,7 +14,7 @@ class MonitoringHarianForm
     {
         return $schema
             ->components([
-                DateTimePicker::make('tanggal')
+                DatePicker::make('tanggal')
                     ->required(),
                 TextInput::make('suhu')
                     ->required()

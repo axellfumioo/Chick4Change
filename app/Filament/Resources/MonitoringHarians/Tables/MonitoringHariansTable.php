@@ -15,7 +15,7 @@ class MonitoringHariansTable
         return $table
             ->columns([
                 TextColumn::make('tanggal')
-                    ->dateTime()
+                    ->date()
                     ->sortable(),
                 TextColumn::make('suhu')
                     ->numeric()
@@ -29,11 +29,11 @@ class MonitoringHariansTable
                     ->numeric()
                     ->sortable(),
                 TextColumn::make('created_at')
-                    ->dateTime()
+                    ->date()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
                 TextColumn::make('updated_at')
-                    ->dateTime()
+                    ->date()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])

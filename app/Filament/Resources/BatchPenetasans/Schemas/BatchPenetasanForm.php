@@ -2,7 +2,7 @@
 
 namespace App\Filament\Resources\BatchPenetasans\Schemas;
 
-use Filament\Forms\Components\DateTimePicker;
+use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
@@ -28,7 +28,7 @@ class BatchPenetasanForm
         ])
                     ->label("Jenis Telur")
                     ->required(),
-                DateTimePicker::make('tanggal_penetasan')
+                DatePicker::make('tanggal_penetasan')
                     ->label("Tanggal Penetasan")
                     ->required(),
                 TextInput::make('jumlah_telur')

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Filament\Resources\BatchPenetasans\Tables;
+namespace App\Filament\Resources\Users\Tables;
 
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
@@ -8,20 +8,20 @@ use Filament\Actions\EditAction;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 
-class BatchPenetasansTable
+class UsersTable
 {
     public static function configure(Table $table): Table
     {
         return $table
             ->columns([
-                TextColumn::make('jenis_telur'),
-                TextColumn::make('tanggal_penetasan')
+                TextColumn::make('name')
+                    ->searchable(),
+                TextColumn::make('email')
+                    ->label('Email address')
+                    ->searchable(),
+                TextColumn::make('email_verified_at')
                     ->date()
                     ->sortable(),
-                TextColumn::make('jumlah_telur')
-                    ->numeric()
-                    ->sortable(),
-                TextColumn::make('lama_inkubasi'),
                 TextColumn::make('created_at')
                     ->date()
                     ->sortable()
